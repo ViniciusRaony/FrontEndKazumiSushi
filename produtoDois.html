@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <!--Barra navegação-->
+        <!--Barra navegação - CONTAINER/NAVBAR -->
         <nav class="navbar navbar-expand-lg navigation-wrap">
             <div class="container">
                 <a class="navbar-brand" href="#"><img class="logo" src="images/KazumiLogo.png"></a>
@@ -41,12 +41,21 @@
                         </li>
                         <div class="icons-position">
                             <li>
-                                <i class="bi bi-cart icons-between" style="font-size: 1.5rem;"></i>
-                                <i class="bi bi-person icons-between" style="font-size: 1.5rem;"></i>                                                                 
-                            </li>
-                            <li>
-                                
-                            </li>
+                                <button type="button" class="btn btn-primary position-relative">
+                                    <i class="bi bi-cart icons-between" style="font-size: 1.5rem;"></i>
+                                    
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>
+                                <button type="button" class="btn btn-primary position-relative">
+                                    <i class="bi bi-person icons-between" style="font-size: 1.5rem;"></i> 
+                                    <span class="position-absolute top-0 start-100 translate-middle bg-danger">
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                                </button>                                                          
+                            </li> 
                         </div>
                     </ul>
                 </div>
@@ -54,7 +63,7 @@
         </nav>
     </header>
 
-    <!--section 1  - MixCardápio + buscar-->
+    <!--section 1  - MixCardápio/buscar - CONTAINER/BUTTONS-->
     <section id="seach">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -66,7 +75,7 @@
         </div>   
     </section>     
     
-   <!--section 2  - Informações + calculo quantidade -->
+   <!--section 2  - Informações/calculo quantidade - CONTAINER/GRID -->
     <section id="destaqueDois">
         <div class="container margin_top">
             <div class="row g-5">
@@ -110,7 +119,7 @@
                             <label for="total" class="col-form-label">Tamanho</label>
                         </div>
                         <div class="col-auto">
-                            <select class="form-select" aria-label="Default select example" id="tamanho">
+                            <select class="form-select" aria-label="Default select example" id="tamanho" onchange="calcularProduto(this.value)">
                                 <option selected>-</option>
                                 <option value="P">P</option>
                                 <option value="M">M</option>
@@ -134,7 +143,7 @@
         </div>
     </section>        
   
-    <!--section 3  - Abas com vídeos/Fotos/Comentários -->
+    <!--section 3  - Abas com vídeos/Fotos/Comentários - CONTAINER/NAVS & TABS-->
     <section id="navcard-bottom">
         <nav class="container card text-center">
             <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
@@ -143,26 +152,23 @@
               <button class="nav-link justify-content-center" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-comentario" aria-selected="false">Comentários</button>
             </div>        
             <div class="tab-content active nav-justified" id="nav-tabContent">
-                <div class="tab-pane fade show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                    <div class="container text-center margin_top">
-                        <img src="images/VideoFakeParaNaoFicarPesado.jpg" alt="Video">                      
-                    </div>
-                    
+                <div class="tab-pane fade show margin_top" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">                    
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/fH1bsh1wfTY"></iframe>                     
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
                     <div class="container text-center">
                         <div class="row g-2">
                           <div class="col-6">
-                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto1.jpg" alt="Video"></div>
+                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto1.jpg" alt="foto_sushi"></div>
                           </div>
                           <div class="col-6">
-                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto2.jpg" alt="Video"></div>
+                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto2.jpg" alt="foto_sushi"></div>
                           </div>
                           <div class="col-6">
-                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto3.jpg" alt="Video"></div>
+                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto3.jpg" alt="foto_sushi"></div>
                           </div>
                           <div class="col-6">
-                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto4.jpg" alt="Video"></div>
+                            <div class="p-3 border-white bg-white"><img src="images/fotos-nav/foto4.jpg" alt="foto_sushi"></div>
                           </div>
                         </div>
                       </div>
