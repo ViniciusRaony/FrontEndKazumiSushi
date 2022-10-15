@@ -1,0 +1,108 @@
+.logo{
+    width: 125px;
+}
+
+
+.icons-position{   
+    margin-left: 30px;      
+}
+
+.cart-position{   
+    margin-right: 5px;      
+}
+
+.icons-between{       
+    margin: 5px;    
+}
+
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fontes */
+:root {
+    --primary-color: #A82C48;
+    --secondary-color: #43121d;
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Qicksand', sans-serif;
+    --text-color: #555;
+}
+
+.nav-link{
+    color: var(--secondary-color);
+    font: var(--secondary-font);
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 300;
+}
+
+.top-banner{
+    width:100%;
+    background: url('images/sushi2.jpg') no-repeat right;
+    background-size: cover;
+    padding:16.875rem 0 9.375rem;
+}
+
+
+
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+p {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px
+}
+
+.dish-content{
+    display: inline-block;
+    font-size: .875rem;
+    padding-top: 0px;
+    margin: 0;
+    font-weight: 300;
+    line-height: 1.22;
+    color: #717171;
+    white-space: pre-line;
+    word-break: break-all;
+}
+
+.mt-n1 {
+    margin-top: -1rem !important;
+}
+
+.margin_top {
+    margin-top: 1rem !important;
+    
+}
+
+.margin_top_another {
+    margin-top: 0.3rem !important;    
+}
+
+#navcard-bottom {
+    margin-top: 1rem !important;
+
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
