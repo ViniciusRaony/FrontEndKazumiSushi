@@ -4,18 +4,19 @@ function calcularProduto() {
     var preco = parseFloat(preco_string_sem_currecy);    
     var qtd = document.getElementById("quantidade").value;
     var tamanho = document.getElementById("tamanho").value;    
-    var resultado = (preco*qtd).toFixed(2)
+    var resultado = (preco*qtd).toFixed(2);
     
 
     if (isNaN(qtd)) { 
-        document.getElementById("total").value=' '   
+        document.getElementById("total").value=' ';   
         return 0;   
     } else if (tamanho == "P") {    
-        resultado = (resultado*1.05).toFixed(2).replace(".", ",");  
+        console.log(resultado);
+        resultado = (resultado*1.00).toFixed(2).replace(".", ",");  
         console.log('Entrei no P ', + resultado);
         document.getElementById("total").value='R$ ' + resultado             
     } else if (tamanho == "M") {    
-        resultado = (resultado*1.10).toFixed(2).replace(".", ","); 
+        resultado = (resultado*1.05).toFixed(2).replace(".", ","); 
         console.log('Entrei no M ', + resultado); 
         document.getElementById("total").value='R$ ' + resultado             
     } else if (tamanho == "G") {    
@@ -25,3 +26,16 @@ function calcularProduto() {
     }     
 }   
 
+var contador = 0;
+
+function adicionarCarrinho(){        
+    var qtd = document.getElementById("quantidade").value;
+    var tamanho = document.getElementById("tamanho").value;    
+
+    if ((tamanho != '-') && (qtd != '-')) {
+        contador++
+        document.getElementById("carrinho").innerHTML=contador       
+    } else {
+        return 0;
+    }
+}
